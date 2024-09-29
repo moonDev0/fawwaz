@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha';
 import { FaMapMarkerAlt, FaPhoneAlt, FaTelegramPlane } from "react-icons/fa";
 import { IoEarthSharp } from "react-icons/io5";
 import { toast } from 'react-toastify';
