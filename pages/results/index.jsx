@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../layout'
 import AppointmentsComponent from '@/components/dahboard/appointments'
+import ResultsComponent from '@/components/dahboard/results'
 
 const index = () => {
   return (
     <Layout>
-        <AppointmentsComponent/>
+        <ResultsComponent/>
     </Layout>
   )
 }

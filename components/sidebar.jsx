@@ -29,7 +29,7 @@ const Sidebar = () => {
     { text: "Appointments", href: "/appointments", icon: <FaTasks /> },
     { text: "Results", href: "/results", icon: <FaTasks /> },
     { text: "Students", href: "/students", icon: <HiChatBubbleLeftRight /> },
-    { text: "Board", href: "/Board/Board", icon: <IoLogInSharp /> },
+    { text: "Board", href: "/board", icon: <IoLogInSharp /> },
   ];
 
   const [openDropdown, setOpenDropdown] = useState(null);

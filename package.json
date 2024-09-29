@@ -17,6 +17,7 @@
     "next": "14.0.2",
     "nodemailer": "^6.9.8",
     "react": "^18",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-kanban": "^0.0.0-test",
