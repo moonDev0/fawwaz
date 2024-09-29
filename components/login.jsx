@@ -87,7 +87,6 @@ const LoginComponent = () => {
                 {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
               </i>
             </div>
-            <Link href="/forgotPassword" className="text-primary text-[14px]">Forgot Password</Link>
             <button disabled={isLoading} className='mt-2 bg-secondary text-white w-full rounded-br-lg rounded-tl-lg py-2'>{isLoading ? "..." : "Login"}</button>
           </form>
         </div>      
