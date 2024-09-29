@@ -159,7 +159,6 @@ const Contactus = () => {
                     </div>
 
                 </div>
-                <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setCaptcha} className="my-2"/>
                 <button className='bg-secondary text-[12px] text-white p-2 rounded-sm' disabled={!captcha}>Submit Message</button>
 
             </div>

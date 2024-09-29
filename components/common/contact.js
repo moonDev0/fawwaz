@@ -123,7 +123,7 @@ const Contact = () => {
                     <div className='w-full bg-white mt-5 rounded-sm'>
                         <textarea required onChange={handleChange} value={formData.message} name="message" className='w-full p-5 outline-none rounded-sm font-bold text-[12px]' id="" placeholder='Message' cols="2" rows="3"></textarea>       
                     </div>
-                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setCaptcha} className="my-2"/>
+                   
                     <button className='w-full bg-secondary text-white py-3 rounded-sm font-bold' disabled={!captcha}>Send Message</button>
                     
                 </form>
