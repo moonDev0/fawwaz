@@ -5,7 +5,7 @@ export const LinkList = [
     },
     {
       name: "about",
-      path:"/about/about"
+      path:"#"
     },
     // {
     //   name: "counselor",
@@ -21,7 +21,7 @@ export const LinkList = [
     // },
     {
       name: "Sign up",
-      path:"/blog/blog"
+      path:"#"
     },
     {
       name: "Login",
