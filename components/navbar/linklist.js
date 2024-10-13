@@ -21,7 +21,7 @@ export const LinkList = [
     // },
     {
       name: "Sign up",
-      path:"#"
+      path:"/signup"
     },
     {
       name: "Login",

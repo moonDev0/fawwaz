@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { auth, db } from '../../firebase'; // Import auth and Firestore
+import { auth, db } from '../firebase'; // Import auth and Firestore
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { setDoc, doc } from 'firebase/firestore'; // Use setDoc and doc
+import { setDoc, doc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import Spinner from '@/lib/spinner';
 
@@ -16,11 +16,12 @@ const RegistrationComponent = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     const [role, setRole] = useState('user');
+    const [schoolid, setschoolid] = useState('');
 
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        if (!fullName || !email || !password || !confirmPassword || !address || !phoneNumber || !ninNumber) {
+        if (!fullName || !email || !password || !confirmPassword || !address || !phoneNumber || !ninNumber || !schoolid) {
             setError('All fields are required.');
             return;
         }
@@ -46,6 +47,7 @@ const RegistrationComponent = () => {
                 phoneNumber,
                 ninNumber,
                 role,
+                schoolid,
             });
 
             toast.success('Registered successfully');
@@ -58,7 +60,7 @@ const RegistrationComponent = () => {
     };
 
     return (
-        <div className="container mx-auto mt-36">
+        <div className="container mx-auto mb-20 mt-36">
             <h1 className="text-center text-2xl font-bold mb-4 text-primary">Register to get started</h1>
             <form onSubmit={handleRegister} className="space-y-4">
                 <div>
@@ -73,7 +75,7 @@ const RegistrationComponent = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="email" className="block text-primary">Email</label>
+                    <label htmlFor="email" className="block text-primary">School Email</label>
                     <input
                         type="email"
                         id="email"
@@ -83,6 +85,17 @@ const RegistrationComponent = () => {
                         required
                     />
                 </div>
+                <div>
+                <label htmlFor="email" className="block text-primary">SchoolID</label>
+                <input
+                    type="schoolid"
+                    id="schoolid"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="border w-full p-2 text-black"
+                    required
+                />
+            </div>
                 <div>
                     <label htmlFor="password" className="block text-primary">Password</label>
                     <input
@@ -139,7 +152,7 @@ const RegistrationComponent = () => {
                     />
                 </div>
                 {error && <p className="text-red-500">{error}</p>}
-                <button type="submit" className="bg-blue-500 text-white p-2 w-full">
+                <button type="submit" className=" bg-blue text-white p-2 w-full">
                     {loading ? <Spinner /> : "Register Now"}
                 </button>
             </form>
